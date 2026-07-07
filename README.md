@@ -1,54 +1,48 @@
-# Remotion video
+# Peak Performance Data — Remotion Marketing Video
 
-<p align="center">
-  <a href="https://github.com/remotion-dev/logo">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-dark.apng">
-      <img alt="Animated Remotion Logo" src="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-light.gif">
-    </picture>
-  </a>
-</p>
+30-second programmatic marketing video for **Peak Performance Data**, built with [Remotion](https://www.remotion.dev/).
 
-Welcome to your Remotion project!
+## Composition
+
+| Property | Value |
+|----------|-------|
+| ID | `PPDMarketing` |
+| Duration | 45 seconds (1350 frames) |
+| Resolution | 1920×1080 @ 30fps |
+
+## Scenes
+
+1. **Hook** — Logo + tagline typewriter
+2. **Problem** — Fragmented tools → unified platform
+3. **Wearables** — Garmin/Whoop/Polar sync + physiology dashboard
+4. **Tennis** — Animated court heatmap + match stats
+5. **Coach Intelligence** — Readiness matrix + AI assistant
+6. **Roles** — Coach · Player · Parent · Club Admin
+7. **CTA** — "Elevate your tennis." + demo request
 
 ## Commands
 
-**Install Dependencies**
-
-```console
-npm i
+```bash
+npm install
+npm run dev          # Open Remotion Studio preview
+npm run lint         # TypeScript + ESLint
+npx remotion render PPDMarketing out/ppd-marketing.mp4
 ```
 
-**Start Preview**
+## Background music
 
-```console
-npm run dev
+Replace `public/music.mp3` with your royalty-free track (keep the filename). Audio fades in over 0.5s and out over the last 2 seconds. A silent 45s placeholder is included for rendering without a track.
+
+## Brand assets
+
+Brand tokens live in `src/brand.ts` (mirrored from `../AcademiesPresentation/content/brand.json`). Logos are in `public/`.
+
+## Project structure
+
 ```
-
-**Render video**
-
-```console
-npx remotion render
+src/
+├── PPDMarketing.tsx      # Main timeline + audio
+├── brand.ts              # Colors, copy, scene durations
+├── components/           # Reusable animated UI pieces
+└── scenes/               # One file per storyboard scene
 ```
-
-**Upgrade Remotion**
-
-```console
-npx remotion upgrade
-```
-
-## Docs
-
-Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).
-
-## Help
-
-We provide help on our [Discord server](https://discord.gg/6VzzNDwUwV).
-
-## Issues
-
-Found an issue with Remotion? [File an issue here](https://github.com/remotion-dev/remotion/issues/new).
-
-## License
-
-Note that for some entities a company license is needed. [Read the terms here](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md).

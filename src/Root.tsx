@@ -1,17 +1,17 @@
 import "./index.css";
 import { Composition } from "remotion";
-import { MyComposition } from "./Composition";
+import { ppdMarketingConfig } from "./PPDMarketing";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
       <Composition
-        id="MyComp"
-        component={MyComposition}
-        durationInFrames={60}
-        fps={30}
-        width={1280}
-        height={720}
+        id={ppdMarketingConfig.id}
+        component={ppdMarketingConfig.component}
+        durationInFrames={ppdMarketingConfig.durationInFrames}
+        fps={ppdMarketingConfig.fps}
+        width={ppdMarketingConfig.width}
+        height={ppdMarketingConfig.height}
       />
     </>
   );
