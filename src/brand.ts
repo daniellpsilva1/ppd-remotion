@@ -1,3 +1,8 @@
+/**
+ * Brand tokens synced from courtviz integration artifacts.
+ * Source: PeakPerformanceDataMarketing/courtviz/integration/brand.json
+ * Regenerate: pnpm --filter @ppd/tokens build (in courtviz)
+ */
 export const brand = {
   name: "Peak Performance Data",
   tagline: "Unified athlete intelligence for tennis academies",
@@ -5,11 +10,13 @@ export const brand = {
   cta: "Request a demo",
   colors: {
     primary: "#2563EB",
+    primaryBright: "#3B82F6",
     primaryDark: "#1D4ED8",
+    marketing: "#0047FF",
     accent: "#10B981",
     accentDark: "#059669",
-    violet: "#7C3AED",
-    violetDark: "#6D28D9",
+    violet: "#A855F7",
+    violetDark: "#7C3AED",
     backgroundDark: "#0F172A",
     bodyBackground: "#0b1220",
     auroraIndigo: "#1e1b4b",
@@ -22,6 +29,10 @@ export const brand = {
     ready: "#10B981",
     caution: "#F59E0B",
     risk: "#EF4444",
+  },
+  fonts: {
+    display: "Barlow Condensed",
+    body: "Inter",
   },
 } as const;
 
